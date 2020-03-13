@@ -1,0 +1,36 @@
+# testing the API with REST Client extention
+GET http://localhost:3005/api/v1/book?currentPage=1&pageLimit=5
+
+###
+GET http://localhost:3005/api/v1/book/5e6b5ff452b4370e30313cad
+
+###
+Post http://localhost:3005/api/v1/buyBook
+Content-Type: application/json
+
+{
+  "id": "5e653fece606693e04b0dbe4",
+  "quantity": "2",
+  "user": ["5e65379311fea33670ea2fdf"]
+}
+###
+POST http://localhost:3005/api/v1/book
+Content-Type: application/json
+
+{
+  "title": "aghayede yek dalghak",
+  "description": "dastane dalghaki k bar khalafe tasavore avam zehne amighi dare,zendegiso eshghesh b zeval mire..ein ketab ye ketabe amigho jalebe k por as jomlehayi k shayad ellate aslie jazabiate ketab bashan",
+  "author": "hanrish boll",
+  "quantity": "50",
+  "users": ["5e65379311fea33670ea2fdf"]
+}
+###
+PATCH http://localhost:3005/api/v1/book/5e653fece606693e04b0dbe4
+Content-Type: application/json 
+
+{
+  "quantity": "50"
+}
+###
+
+DELETE http://localhost:3005/api/v1/book/5e653388fce79c32a0eb7b61

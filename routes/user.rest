@@ -1,0 +1,42 @@
+# testing the API with REST Client extention
+Post http://localhost:3005/api/v1/login
+
+Content-Type: application/json
+
+{
+"email":"bahar@gmail.com",
+"password":"123456"
+}
+###
+GET http://localhost:3005/api/v1/users
+
+###
+GET http://localhost:3005/api/v1/users/5e65379311fea33670ea2fdf
+
+###
+
+POST http://localhost:3005/api/v1/users
+Content-Type: application/json
+
+{
+  "type":"admin",
+        "name": "test9",
+        "family": "test9",
+        "age": "10",
+        "email": "test4@gmail.com",
+        "password":"123456",
+        "books": [],
+        "avatar": "user.jpg"
+}
+###
+
+PATCH http://localhost:3005/api/v1/users/5e6b644ba49acd3ab0e964f4
+Content-Type: application/json 
+
+{
+  "type": "admin",
+  "password":"123456"
+}
+###
+
+DELETE http://localhost:3005/api/v1/users/5e6533bafce79c32a0eb7b62
